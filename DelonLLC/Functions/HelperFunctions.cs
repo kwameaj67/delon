@@ -29,7 +29,7 @@ namespace DelonLLC.Functions
                 case "blocked":
                     return CardStatus.blocked;
                 default:
-                    return CardStatus.inactive;
+                    throw new Exception("Unknown type");
             }
         }
         public string ResolveCardStatus(CardStatus status)
@@ -43,7 +43,7 @@ namespace DelonLLC.Functions
                 case CardStatus.blocked:
                     return "blocked";
                 default:
-                    return "active";
+                    throw new Exception("Unknown type");
             }
         }
 
@@ -56,7 +56,7 @@ namespace DelonLLC.Functions
                 case "mobile_money":
                     return CardType.mobile_money;
                 default:
-                    return CardType.mobile_money;
+                    throw new Exception("Unknown type");
             }
         }
 
